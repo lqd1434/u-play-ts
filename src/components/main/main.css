@@ -1,0 +1,43 @@
+.marginLeft_transition{
+    transition: margin-left 500ms;
+}
+.footer-container{
+    float: bottom;
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    background-color: white;
+    height: 60px;
+    width: 100%;
+    border: #1A1A1A 1px solid;
+    box-shadow: 0 0 5px dimgray;
+    transition: left 500ms;
+}
+.playFront{
+    display: block;
+    visibility: visible;
+}
+.playBack{
+    display: block;
+    visibility: hidden;
+}
+.playForbid{
+    display: none;
+    visibility: hidden;
+}
+.router-container{
+    margin-top: 70px;
+}
+.authed{
+    margin-top: 70px;
+    transition: margin-left 500ms;
+}
+.noAuth{
+
+}
+.Collapsed{
+    margin-left: 71px;
+}
+.noCollapsed{
+    margin-left: 241px;
+}

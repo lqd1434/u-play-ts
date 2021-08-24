@@ -1,0 +1,142 @@
+.op-play-group{
+    width: 160px;
+    padding-left: 20px;
+    display: inline-block;
+    padding-top: 20px;
+    height: 60px;
+    border-right: #C0C0C0 1px solid;
+}
+.op-icon{
+    font-size: 30px!important;
+    display: inline-block;
+    transition: font-size 300ms;
+}
+.op-icon:hover{
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+}
+.musicPlay-info{
+    display: inline-block;
+    margin-left: 80px;
+    height: 60px;
+    position: absolute;
+}
+.musicPlay-info .music-progressBar{
+    -webkit-appearance: none;
+    position: absolute;
+    appearance: none;
+    height: 10px;
+    width: inherit;
+    margin-top: 38px;
+    /* outline设置为零防止点到空白区域时会出现边框影响美观性问题 */
+    outline: 0;
+    border: black 1px solid;
+    /* 背景色设置为渐变色，有兼容性问题谨慎使用 */
+    border-radius: 4px;
+    transition: width 500ms;
+}
+.music-progressBar:hover{
+    cursor: pointer;
+}
+.music-progressBar::-webkit-slider-thumb{
+    visibility: hidden;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    box-shadow: 0 0 5px white ;
+    border-radius: 50%;
+    background-color: white;
+    border: 6px solid black;
+    transition: visibility 500ms;
+}
+.music-progressBar:hover::-webkit-slider-thumb{
+    visibility: visible;
+}
+.music-progressBar::after{
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    border-radius: .28571429rem;
+    animation: progress-active 2s ease infinite;
+}
+.icon-loading{
+    position: absolute;
+    display: inline-block;
+    font-size: 50px!important;
+    margin: 4px!important;
+    line-height:1!important;
+}
+.music-logo{
+    font-size: 22px!important;
+    position: absolute;
+    padding-top: 20px;
+    padding-left: 23px;
+}
+.musicName{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 12px;
+    font-weight: bolder;
+    width: inherit;
+}
+.musicTime{
+    margin-top: -15px;
+    margin-right: 10px;
+    padding: 0;
+    float: right;
+    transition: margin-left 500ms;
+}
+.icon-setting-group{
+    display: inline-block;
+    position: absolute;
+    height: 60px;
+}
+.icon-setting{
+    font-size: 23px!important;
+    display: inline-block;
+    margin-top: 28px!important;
+}
+.icon-setting:hover{
+    cursor: pointer;
+}
+.volumeContainer{
+    width: 35px;
+    height: 130px;
+    position: relative;
+}
+.volumeChange{
+    display: block;
+    position: absolute;
+    left: -37px;
+    top: 70px;
+    width: 110px;
+    transform: rotate(-90deg);
+}
+.volumeNumber{
+    position: absolute;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+@-webkit-keyframes  rotate1 {
+    from {transform: rotate(0deg) }
+    18% {transform: rotate(60deg)}
+    36% {transform: rotate(120deg)}
+    54% {transform: rotate(180deg)}
+    72% {transform: rotate(240deg)}
+    90% {transform: rotate(300deg)}
+    to { transform: rotate(0deg) }
+}
+.rotate1{
+    -webkit-animation-name: rotate1;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+}
+

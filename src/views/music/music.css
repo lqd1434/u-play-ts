@@ -1,0 +1,30 @@
+.u-music{
+    margin-top: 80px;
+    padding-bottom: 61px;
+    -webkit-user-select: none;
+}
+.op-icon-music{
+    font-size: 22px!important;
+}
+.op-icon-music:hover{
+    cursor: pointer;
+}
+.des-img{
+    width: 120px;
+    border-radius: 10px!important;
+}
+.music-tr:hover{
+    box-shadow: 0 0 3px #BCFFFF;
+}
+.message-container{
+    position: absolute;
+    display: block;
+    width: 200px!important;
+    height: 50px!important;
+    margin: 200px 40%;
+    border-radius: 20px;
+    /*transition: visibility 500ms;*/
+}
+.music-active{
+    margin-left: 18px!important;
+}

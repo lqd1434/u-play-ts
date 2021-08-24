@@ -1,0 +1,84 @@
+.u-header{
+    height: 70px;
+    width: 100%;
+    border: grey 1px solid;
+    box-shadow: 0 0 5px dimgray;
+    border-radius: 5px;
+    -webkit-user-select: none;
+    transition: margin-left 500ms;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    background-color: white;
+}
+.collapsed-icon{
+    font-size: 23px!important;
+    padding-top: 23px;
+    padding-left: 18px;
+}
+.collapsed-icon:hover{
+    color: black;
+    cursor: pointer;
+}
+.header-popover{
+    float: right;
+    margin-right: 140px;
+    padding-right: 30px;
+    border-right: darkgrey 2px solid;
+}
+.img-outer{
+    height: 50px;
+    width: 50px;
+    border: black 1px solid;
+    border-radius: 50%;
+    float: right;
+    margin-top: 10px;
+    margin-right: 300px;
+}
+.img-outer:hover{
+    cursor: pointer;
+}
+.img-inner{
+    height: 80px;
+    width: 80px;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+    border: black 1px solid;
+}
+.popContent{
+    width: 180px;
+
+}
+.logout-btn{
+    display: block;
+    width: 100%;
+    background-color: #1A1A1A;
+    color: white;
+    margin: 10px 10px 10px 0;
+    height: 40px;
+    border-radius: 6px;
+}
+.logout-btn:hover{
+    box-shadow: 0 0 5px gray;
+    cursor: pointer;
+}
+.userName-inner{
+    -webkit-user-select: none;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+.userRole-inner{
+    -webkit-user-select: none;
+    font-size: 10px!important;
+    display: block;
+    text-align: center;
+    width: fit-content;
+    background-color: black;
+    color: white;
+    padding: 1px;
+    margin:0 auto 10px auto;
+    border-radius: 2px;
+
+}

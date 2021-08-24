@@ -1,0 +1,65 @@
+const SubMenu = (props: {
+        subItems: any
+        collapsed: any
+        ItemCollapsed: any
+        setItemCollapsed: any
+        toThisPage: any
+    }) => {
+        const { subItems, collapsed, ItemCollapsed, setItemCollapsed, toThisPage } = props
+        const classNameForI = classNames(
+            subItems.icon,
+            'icon',
+            { 'sideBar-icon': !collapsed },
+            { 'sideBar-icon-collapsed': collapsed },
+        )
+        const classNameForItem = classNames(
+            'sideBar-item-basic',
+            'animate__animated animate__fadeInUp',
+            { 'sideBar-item': !collapsed },
+            { 'sideBar-item-collapsed': collapsed },
+        )
+        return (
+            <>
+                <div className={classNameForItem}>
+                    <i className={classNameForI} />
+                    <span
+                        className="sideBar-text"
+                        style={collapsed ? { display: 'none' } : { display: 'inline' }}
+                    >
+                        {subItems.title}
+                    </span>
+                    <span
+                        className="sideBar-text"
+                        style={collapsed ? { display: 'inline' } : { display: 'none' }}
+                    >
+                        {subItems.collapsedTitle}
+                    </span>
+                    <i
+                        style={!collapsed ? { display: 'inline' } : { display: 'none' }}
+                        onClick={() => {
+                            setItemCollapsed()
+                        }}
+                        className={
+                            ItemCollapsed ? 'fas fa-angle-up col-t' : 'fas fa-angle-down col-t'
+                        }
+                    />
+                </div>
+                {!ItemCollapsed
+                    ? !collapsed
+                        ? subItems.children.map((item: any) => (
+                              <Item
+                                  key={item.id}
+                                  toThisPage={toThisPage}
+                                  collapsed={collapsed}
+                                  item={item}
+                                  isSub=""
+                              >
+                                  {item.title}
+                              </Item>
+                          ))
+                        : ''
+                    : ''}
+            </>
+        )
+    }
+
